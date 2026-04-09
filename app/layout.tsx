@@ -56,7 +56,7 @@ const jsonLd = {
     'Custom websites, AI chatbots, and AI agents for local businesses. Based in Las Vegas, NV.',
   url: baseUrl,
   telephone: '+17029829560',
-  email: 'jaysal2789@gmail.com',
+  email: 'builtbyjasondev@gmail.com',
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'Las Vegas',
