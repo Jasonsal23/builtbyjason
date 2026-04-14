@@ -59,4 +59,20 @@ export const projects: Project[] = [
     liveUrl: 'https://offroadparacord.com',
     align: 'left',
   },
+  {
+    id: 'jasonsalazarlinks',
+    title: 'Jason Salazar Links — Personal Link Hub',
+    description:
+      'A custom-built Linktree-style site that consolidates all social profiles, projects, and content into one clean, branded page. Built as a standalone product concept — anyone can create their own link hub with a custom URL and personalized layout.',
+    highlights: [
+      'Custom-built alternative to Linktree',
+      'All links, socials, and projects in one place',
+      'Fully branded and hosted at a custom domain',
+    ],
+    tags: ['Link Hub', 'Personal Brand', 'Custom Build', 'SaaS Concept'],
+    imagePlaceholder: '[PROJECT_SCREENSHOT_JASONSALAZARLINKS]',
+    image: '/images/jasonsalazarlinks.png',
+    liveUrl: 'https://jasonsalazar.com',
+    align: 'right',
+  },
 ]
