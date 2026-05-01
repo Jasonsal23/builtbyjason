@@ -22,7 +22,7 @@ function isRateLimited(ip: string): boolean {
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json()
-    const { name, email, phone, service, budget, message, website } = body
+    const { name, email, phone, service, message, website } = body
 
     // Honeypot check — bots fill this, humans don't
     if (website) {
@@ -73,10 +73,6 @@ export async function POST(req: NextRequest) {
           <tr>
             <td style="padding: 8px 0; color: #9a9a9a; vertical-align: top;">Service</td>
             <td style="padding: 8px 0; color: #c9a84c; font-weight: 600;">${service}</td>
-          </tr>
-          <tr>
-            <td style="padding: 8px 0; color: #9a9a9a; vertical-align: top;">Budget</td>
-            <td style="padding: 8px 0; color: #f0ece4;">${budget || 'Not specified'}</td>
           </tr>
         </table>
         <hr style="border: none; border-top: 1px solid #2a2a2a; margin: 24px 0;" />

@@ -5,10 +5,10 @@ import { motion, AnimatePresence } from 'framer-motion'
 import Link from 'next/link'
 
 const navLinks = [
-  { label: 'Work', href: '#projects' },
-  { label: 'Services', href: '#services' },
   { label: 'About', href: '#about' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Services', href: '#services' },
+  { label: 'Work', href: '#projects' },
+  { label: 'Pricing', href: '#pricing' },
 ]
 
 export default function Navbar() {
@@ -63,7 +63,7 @@ export default function Navbar() {
               onClick={() => handleNavClick('#contact')}
               className="font-body text-sm px-4 py-2 border border-gold text-gold hover:bg-gold hover:text-background transition-all duration-200 rounded-sm tracking-wide"
             >
-              Hire Me
+              Let's Build
             </button>
           </div>
 
@@ -120,7 +120,7 @@ export default function Navbar() {
               onClick={() => handleNavClick('#contact')}
               className="font-body text-base px-8 py-3 bg-gold text-background rounded-sm font-semibold mt-4 hover:bg-gold-light transition-colors duration-200"
             >
-              Hire Me
+              Let's Build
             </motion.button>
           </motion.div>
         )}
