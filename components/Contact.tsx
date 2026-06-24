@@ -131,11 +131,13 @@ function ContactForm() {
       <div>
         <label className={labelClass}>Service *</label>
         <select name="service" value={form.service} onChange={handleChange} className={`${inputClass} cursor-pointer`}>
-          <option value="" disabled>Select a package...</option>
-          <option>Starter — Multi-Page Website ($1,200)</option>
-          <option>Pro — Website + AI Chatbot ($2,200)</option>
-          <option>Commerce — E-Commerce Store ($3,000)</option>
-          <option>Custom Project</option>
+          <option value="" disabled>What do you need?</option>
+          <option>Custom Website</option>
+          <option>AI Chatbot</option>
+          <option>E-Commerce Store</option>
+          <option>Website Redesign</option>
+          <option>AI Agent</option>
+          <option>Something Else</option>
         </select>
         {errors.service && <p className="mt-1 text-xs text-red-400 font-body">{errors.service}</p>}
       </div>

@@ -2,7 +2,6 @@
 
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
-import Image from 'next/image'
 import SectionHeading from './ui/SectionHeading'
 import AnimatedSection from './ui/AnimatedSection'
 
@@ -59,20 +58,6 @@ export default function About() {
               </div>
             </AnimatedSection>
 
-            {/* Headshot */}
-            <AnimatedSection delay={0.3}>
-              <div className="relative w-full max-w-xs aspect-square rounded-sm overflow-hidden group border border-border hover:border-gold/30 transition-colors duration-300">
-                <Image
-                  src="/images/Salazar, Jason.jpg"
-                  alt="Jason Salazar"
-                  fill
-                  className="object-cover object-center"
-                  sizes="320px"
-                />
-                <div className="absolute top-0 left-0 w-10 h-10 border-t-2 border-l-2 border-gold/20 group-hover:border-gold/40 transition-colors duration-300 pointer-events-none z-10" />
-                <div className="absolute bottom-0 right-0 w-10 h-10 border-b-2 border-r-2 border-gold/20 group-hover:border-gold/40 transition-colors duration-300 pointer-events-none z-10" />
-              </div>
-            </AnimatedSection>
           </div>
 
           {/* Right: stats */}
