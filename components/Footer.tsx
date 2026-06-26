@@ -27,14 +27,11 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
         <div className="flex items-center gap-6">
           <p className="font-body text-sm text-muted">
-            © 2026 Jason Salazar. Built from scratch, obviously.
+            © 2026 Built By Jason.
           </p>
-          <Link
-            href="/careers"
-            className="font-body text-sm text-muted hover:text-gold transition-colors duration-200"
-          >
-            Careers
-          </Link>
+          <Link href="/careers" className="font-body text-sm text-muted hover:text-gold transition-colors duration-200">Careers</Link>
+          <Link href="/privacy" className="font-body text-sm text-muted hover:text-gold transition-colors duration-200">Privacy Policy</Link>
+          <Link href="/terms" className="font-body text-sm text-muted hover:text-gold transition-colors duration-200">Terms of Service</Link>
         </div>
         <div className="flex items-center gap-4">
           {socials.map((s) => (
