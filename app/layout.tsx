@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Space_Grotesk, DM_Sans } from 'next/font/google'
 import './globals.css'
 import Script from 'next/script'
+import { Analytics } from '@vercel/analytics/next'
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],
@@ -107,6 +108,7 @@ export default function RootLayout({
           data-server="https://ai-chat-service-production-9741.up.railway.app"
           strategy="afterInteractive"
         />
+        <Analytics />
       </body>
     </html>
   )
