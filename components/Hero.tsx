@@ -48,7 +48,7 @@ export default function Hero() {
           className="mb-6"
         >
           <span className="inline-block font-body text-xs tracking-[0.25em] uppercase text-gold border border-gold/30 px-4 py-1.5 rounded-sm bg-gold/5">
-            Web Developer & AI Builder
+            Web Development & AI Solutions
           </span>
         </motion.div>
 
@@ -59,15 +59,14 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 0.3 }}
           className="font-heading text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-cream leading-[0.95] tracking-tight mb-6"
         >
-          I Build Websites
+          Your Business,
           <br />
-          <span className="text-gold">& AI Tools</span>
+          <span className="text-gold">Built Right.</span>
           <br />
-          for Businesses
+          Online & Working
           <br />
-          That Want to{' '}
           <span className="relative inline-block">
-            Stand Out
+            For You
             <motion.span
               initial={{ scaleX: 0 }}
               animate={{ scaleX: 1 }}
@@ -84,8 +83,8 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.5 }}
           className="font-body text-muted text-lg md:text-xl max-w-xl leading-relaxed mb-10"
         >
-          Developer & AI specialist based in Las Vegas, NV — helping local businesses look sharp
-          online and work smarter with AI.
+          Custom websites, AI chatbots, and automation tools built for businesses that are serious
+          about their online presence. Based in Las Vegas. Built from scratch — every time.
         </motion.p>
 
         {/* CTAs */}
@@ -99,7 +98,7 @@ export default function Hero() {
             onClick={() => handleScrollTo('#projects')}
             className="font-body font-medium text-sm px-7 py-3.5 bg-gold text-background rounded-sm hover:bg-gold-light transition-all duration-200 active:scale-95 tracking-wide"
           >
-            See My Work
+            See the Work
           </button>
           <button
             onClick={() => handleScrollTo('#contact')}

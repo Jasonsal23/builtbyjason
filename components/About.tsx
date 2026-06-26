@@ -6,9 +6,9 @@ import SectionHeading from './ui/SectionHeading'
 import AnimatedSection from './ui/AnimatedSection'
 
 const stats = [
-  { value: '5+', label: 'Years in E-Commerce' },
-  { value: '10+', label: 'Projects Shipped' },
-  { value: '24/7', label: 'AI Tools That Never Sleep' },
+  { value: '10+', label: 'Businesses Launched Online' },
+  { value: '100%', label: 'Built From Scratch — No Templates' },
+  { value: '24/7', label: 'AI Tools Running While You Sleep' },
 ]
 
 function StatItem({ value, label, index }: { value: string; label: string; index: number }) {
@@ -38,22 +38,18 @@ export default function About() {
           <div className="flex flex-col gap-8">
             <SectionHeading
               label="About"
-              title="Not Your Average Dev"
+              title="Built for Results"
             />
             <AnimatedSection delay={0.2}>
               <div className="flex flex-col gap-4 text-muted font-body text-base leading-relaxed">
                 <p>
-                  I'm a web developer and AI solutions builder based in Las Vegas. I build custom
-                  websites, AI chatbots, and AI agents for local businesses that want to compete and
-                  look the part online.
-                </p>
-                <p>
-                  With 5+ years of real-world e-commerce experience on Etsy, I'm not a template
-                  installer — I'm a hands-on builder who ships real products that work.
+                  Most businesses don't have a bad product — they have a bad web presence. A slow
+                  site, an outdated design, or no online presence at all is costing you customers
+                  every single day.
                 </p>
                 <p className="text-cream/80">
-                  I don't just build websites — I build tools that work for you while you work on
-                  your business.
+                  Every project is built from scratch, designed around your business, and delivered
+                  ready to work — not ready to hand off to someone else to finish.
                 </p>
               </div>
             </AnimatedSection>
