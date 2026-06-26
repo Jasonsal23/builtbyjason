@@ -78,8 +78,8 @@ export default function PrivacyPage() {
               <h2 className="font-heading text-xl font-bold text-cream">Your Rights</h2>
               <p>
                 You have the right to request access to, correction of, or deletion of any personal information you've submitted to us. To exercise these rights, reach out directly at{' '}
-                <a href="mailto:jaysal2789@gmail.com" className="text-gold hover:text-gold-light transition-colors duration-200">
-                  jaysal2789@gmail.com
+                <a href="mailto:builtbyjasondev@gmail.com" className="text-gold hover:text-gold-light transition-colors duration-200">
+                  builtbyjasondev@gmail.com
                 </a>.
               </p>
             </section>
@@ -95,8 +95,8 @@ export default function PrivacyPage() {
               <h2 className="font-heading text-xl font-bold text-cream">Contact</h2>
               <p>
                 Questions about this policy? Email{' '}
-                <a href="mailto:jaysal2789@gmail.com" className="text-gold hover:text-gold-light transition-colors duration-200">
-                  jaysal2789@gmail.com
+                <a href="mailto:builtbyjasondev@gmail.com" className="text-gold hover:text-gold-light transition-colors duration-200">
+                  builtbyjasondev@gmail.com
                 </a>{' '}
                 or call <a href="tel:7029829560" className="text-gold hover:text-gold-light transition-colors duration-200">(702) 982-9560</a>.
               </p>
