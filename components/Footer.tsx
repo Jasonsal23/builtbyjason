@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 const socials = [
   {
     label: 'YouTube',
@@ -23,9 +25,17 @@ export default function Footer() {
   return (
     <footer className="bg-background border-t border-border py-8 px-6 md:px-10">
       <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-        <p className="font-body text-sm text-muted">
-          © 2026 Jason Salazar. Built from scratch, obviously.
-        </p>
+        <div className="flex items-center gap-6">
+          <p className="font-body text-sm text-muted">
+            © 2026 Jason Salazar. Built from scratch, obviously.
+          </p>
+          <Link
+            href="/careers"
+            className="font-body text-sm text-muted hover:text-gold transition-colors duration-200"
+          >
+            Careers
+          </Link>
+        </div>
         <div className="flex items-center gap-4">
           {socials.map((s) => (
             <a
@@ -42,5 +52,6 @@ export default function Footer() {
         </div>
       </div>
     </footer>
+
   )
 }
