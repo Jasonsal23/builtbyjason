@@ -18,7 +18,7 @@ export default function AnimatedSection({
   const initial = {
     opacity: 0,
     y: direction === 'up' ? 32 : 0,
-    x: direction === 'left' ? -48 : direction === 'right' ? 48 : 0,
+    x: direction === 'left' ? -32 : direction === 'right' ? 32 : 0,
   }
 
   return (

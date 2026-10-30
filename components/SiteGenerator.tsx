@@ -255,7 +255,7 @@ export default function SiteGenerator() {
   return (
     <div className="w-full">
       {/* Prompt input */}
-      <div className="bg-surface/80 backdrop-blur-sm border border-border rounded-md p-3 md:p-4 shadow-2xl shadow-black/40 focus-within:border-gold/40 transition-colors duration-300">
+      <div className="bg-surface border border-border rounded-md p-3 md:p-4 shadow-2xl shadow-black/40 focus-within:border-gold/40 transition-colors duration-300">
         {/* Mason identity */}
         <div className="flex items-center gap-3 px-2 pt-1 pb-2">
           <MasonAvatar size={40} mood={isGenerating ? 'thinking' : isUnlocked ? 'happy' : 'idle'} />

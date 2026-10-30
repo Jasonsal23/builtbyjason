@@ -20,7 +20,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
     >
       {/* Image */}
       <motion.div
-        initial={{ opacity: 0, x: isLeft ? -60 : 60 }}
+        initial={{ opacity: 0, x: isLeft ? -32 : 32 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true, margin: '-80px' }}
         transition={{ duration: 0.7, ease: [0.25, 0.1, 0.25, 1] }}
@@ -43,7 +43,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center">
-                <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-background/80 backdrop-blur-sm border border-gold/40 text-gold font-body text-sm px-4 py-2 rounded-sm">
+                <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-background/90 border border-gold/40 text-gold font-body text-sm px-4 py-2 rounded-sm">
                   Visit Site →
                 </span>
               </div>
@@ -69,7 +69,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
 
       {/* Text */}
       <motion.div
-        initial={{ opacity: 0, x: isLeft ? 60 : -60 }}
+        initial={{ opacity: 0, x: isLeft ? 32 : -32 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true, margin: '-80px' }}
         transition={{ duration: 0.7, delay: 0.15, ease: [0.25, 0.1, 0.25, 1] }}

@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import SiteGenerator from './SiteGenerator'
 
 const socialLinks = [
@@ -38,15 +37,12 @@ export default function Hero() {
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-surface pointer-events-none" />
       {/* Subtle gold radial glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-gold/3 blur-[120px] pointer-events-none" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(201,168,76,0.05)_0%,transparent_60%)] pointer-events-none" />
 
       <div className="relative z-10 max-w-5xl w-full mx-auto">
         {/* Main heading */}
-        <motion.h1
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.3 }}
-          className="font-heading text-[clamp(2rem,10vw,3.75rem)] sm:text-6xl md:text-7xl font-bold text-cream leading-[0.95] tracking-tight mb-6"
+        <h1
+          className="hero-rise font-heading text-[clamp(2rem,10vw,3.75rem)] sm:text-6xl md:text-7xl font-bold text-cream leading-[0.95] tracking-tight mb-6"
         >
           <span className="whitespace-nowrap">You Describe It.</span>
           <br />
@@ -54,43 +50,29 @@ export default function Hero() {
           <br />
           <span className="relative inline-block text-gold">
             I Build It.
-            <motion.span
-              initial={{ scaleX: 0 }}
-              animate={{ scaleX: 1 }}
-              transition={{ duration: 0.6, delay: 1.1 }}
-              className="absolute -bottom-1 left-0 right-0 h-1 bg-gold origin-left"
-            />
+            <span className="hero-underline absolute -bottom-1 left-0 right-0 h-1 bg-gold origin-left" />
           </span>
-        </motion.h1>
+        </h1>
 
         {/* Subtext */}
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-          className="font-body text-muted text-lg md:text-xl max-w-2xl leading-relaxed mb-8"
+        <p
+          style={{ animationDelay: '80ms' }}
+          className="hero-rise font-body text-muted text-lg md:text-xl max-w-2xl leading-relaxed mb-8"
         >
           Tell <span className="text-gold font-medium">Mason</span>, my AI web designer, about any idea (a business,
           a portfolio, a wedding, a side project) and watch it come to life in a couple of minutes. Love it?
           I&apos;ll make it real.
-        </motion.p>
+        </p>
 
         {/* Generator */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.65 }}
-          className="mb-10"
-        >
+        <div style={{ animationDelay: '140ms' }} className="hero-rise mb-10">
           <SiteGenerator />
-        </motion.div>
+        </div>
 
         {/* Secondary links + socials */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.9, duration: 0.6 }}
-          className="flex flex-wrap items-center gap-x-6 gap-y-4"
+        <div
+          style={{ animationDelay: '260ms' }}
+          className="hero-rise flex flex-wrap items-center gap-x-6 gap-y-4"
         >
           <button
             onClick={() => handleScrollTo('#projects')}
@@ -119,7 +101,7 @@ export default function Hero() {
               </a>
             ))}
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   )
