@@ -1,7 +1,7 @@
 import { ImageResponse } from 'next/og'
 
 export const runtime = 'edge'
-export const alt = 'Jason Salazar — Web Developer & AI Solutions | Las Vegas, NV'
+export const alt = 'Built By Jason — You Describe It. Mason Designs It. I Build It.'
 export const size = { width: 1200, height: 630 }
 export const contentType = 'image/png'
 
@@ -46,11 +46,12 @@ export default function Image() {
           textTransform: 'uppercase',
           marginBottom: 32,
         }}>
-          JASON SALAZAR
+          BUILT BY JASON
         </div>
 
         {/* Headline */}
         <div style={{
+          display: 'flex',
           fontSize: 64,
           fontWeight: 800,
           color: '#f0ece4',
@@ -58,8 +59,11 @@ export default function Image() {
           marginBottom: 28,
           maxWidth: 800,
         }}>
-          Web Developer &{' '}
-          <span style={{ color: '#c9a84c' }}>AI Solutions</span>
+          <div style={{ display: 'flex', flexDirection: 'column' }}>
+            <span>You Describe It.</span>
+            <span>Mason Designs It.</span>
+            <span style={{ color: '#c9a84c' }}>I Build It.</span>
+          </div>
         </div>
 
         {/* Subtext */}
@@ -68,12 +72,12 @@ export default function Image() {
           color: '#9a9a9a',
           marginBottom: 48,
         }}>
-          Custom websites, AI chatbots & agents for local businesses.
+          Free AI website designs in minutes. Built for real by Jason.
         </div>
 
         {/* Tags row */}
         <div style={{ display: 'flex', gap: 12 }}>
-          {['Las Vegas, NV', 'Custom Websites', 'AI Chatbots', 'AI Agents'].map((tag) => (
+          {['Free AI Website Designer', 'Custom Websites', 'AI Chatbots', 'AI Agents'].map((tag) => (
             <div key={tag} style={{
               fontSize: 14,
               color: '#c9a84c',
@@ -94,7 +98,7 @@ export default function Image() {
           bottom: 48,
           right: 80,
           fontSize: 16,
-          color: '#2a2a2a',
+          color: '#9a9a9a',
           letterSpacing: '0.1em',
         }}>
           builtbyjason.dev

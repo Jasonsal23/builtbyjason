@@ -3,6 +3,7 @@ import Link from 'next/link'
 export const metadata = {
   title: 'Terms of Service — Built by Jason',
   description: 'Terms of service for Built by Jason web development and AI services.',
+  alternates: { canonical: '/terms' },
 }
 
 export default function TermsPage() {

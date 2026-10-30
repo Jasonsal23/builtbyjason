@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import SiteGenerator from './SiteGenerator'
 
 const socialLinks = [
   {
@@ -32,7 +33,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex flex-col items-center justify-center px-6 md:px-10 overflow-hidden"
+      className="relative min-h-screen flex flex-col items-center justify-center px-6 md:px-10 pt-28 pb-20 overflow-hidden"
     >
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-surface pointer-events-none" />
@@ -40,33 +41,19 @@ export default function Hero() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-gold/3 blur-[120px] pointer-events-none" />
 
       <div className="relative z-10 max-w-5xl w-full mx-auto">
-        {/* Label */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          className="mb-6"
-        >
-          <span className="inline-block font-body text-xs tracking-[0.25em] uppercase text-gold border border-gold/30 px-4 py-1.5 rounded-sm bg-gold/5">
-            Web Development & AI Solutions
-          </span>
-        </motion.div>
-
         {/* Main heading */}
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.3 }}
-          className="font-heading text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-cream leading-[0.95] tracking-tight mb-6"
+          className="font-heading text-[clamp(2rem,10vw,3.75rem)] sm:text-6xl md:text-7xl font-bold text-cream leading-[0.95] tracking-tight mb-6"
         >
-          Your Business,
+          <span className="whitespace-nowrap">You Describe It.</span>
           <br />
-          <span className="text-gold">Built Right.</span>
+          <span className="whitespace-nowrap">Mason Designs It.</span>
           <br />
-          Online & Working
-          <br />
-          <span className="relative inline-block">
-            For You
+          <span className="relative inline-block text-gold">
+            I Build It.
             <motion.span
               initial={{ scaleX: 0 }}
               animate={{ scaleX: 1 }}
@@ -81,69 +68,59 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.5 }}
-          className="font-body text-muted text-lg md:text-xl max-w-xl leading-relaxed mb-10"
+          className="font-body text-muted text-lg md:text-xl max-w-2xl leading-relaxed mb-8"
         >
-          Custom websites, AI chatbots, and automation tools built for businesses that are serious
-          about their online presence. Based in Las Vegas. Built from scratch — every time.
+          Tell <span className="text-gold font-medium">Mason</span>, my AI web designer, about any idea (a business,
+          a portfolio, a wedding, a side project) and watch it come to life in a couple of minutes. Love it?
+          I&apos;ll make it real.
         </motion.p>
 
-        {/* CTAs */}
+        {/* Generator */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.65 }}
-          className="flex flex-wrap gap-4 items-center mb-12"
+          className="mb-10"
         >
-          <button
-            onClick={() => handleScrollTo('#projects')}
-            className="font-body font-medium text-sm px-7 py-3.5 bg-gold text-background rounded-sm hover:bg-gold-light transition-all duration-200 active:scale-95 tracking-wide"
-          >
-            See the Work
-          </button>
-          <button
-            onClick={() => handleScrollTo('#contact')}
-            className="font-body font-medium text-sm px-7 py-3.5 border border-cream/30 text-cream rounded-sm hover:border-cream hover:bg-cream/5 transition-all duration-200 active:scale-95 tracking-wide"
-          >
-            Get In Touch
-          </button>
+          <SiteGenerator />
         </motion.div>
 
-        {/* Social links */}
+        {/* Secondary links + socials */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.9, duration: 0.6 }}
-          className="flex items-center gap-5"
+          className="flex flex-wrap items-center gap-x-6 gap-y-4"
         >
-          {socialLinks.map((s) => (
-            <a
-              key={s.label}
-              href={s.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={s.label}
-              className="text-muted hover:text-gold transition-colors duration-200"
-            >
-              {s.icon}
-            </a>
-          ))}
+          <button
+            onClick={() => handleScrollTo('#projects')}
+            className="font-body text-sm text-cream hover:text-gold transition-colors duration-200 tracking-wide"
+          >
+            See the Work →
+          </button>
+          <button
+            onClick={() => handleScrollTo('#contact')}
+            className="font-body text-sm text-cream hover:text-gold transition-colors duration-200 tracking-wide"
+          >
+            Get In Touch →
+          </button>
+          <span className="hidden sm:block w-px h-4 bg-border" />
+          <div className="flex items-center gap-5">
+            {socialLinks.map((s) => (
+              <a
+                key={s.label}
+                href={s.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={s.label}
+                className="text-muted hover:text-gold transition-colors duration-200"
+              >
+                {s.icon}
+              </a>
+            ))}
+          </div>
         </motion.div>
       </div>
-
-      {/* Scroll indicator */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.4, duration: 0.6 }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
-      >
-        <span className="font-body text-xs text-muted tracking-widest uppercase">Scroll</span>
-        <motion.div
-          animate={{ y: [0, 6, 0] }}
-          transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
-          className="w-px h-8 bg-gradient-to-b from-gold/50 to-transparent"
-        />
-      </motion.div>
     </section>
   )
 }
